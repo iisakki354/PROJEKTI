@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Yhteystiedot</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="listaa-tyokalu.html">Listaa Työkalu</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="yhteystiedot">
+            <h2>Ota yhteyttä</h2>
+            <form id="yhteydenotto-form">
+                <label for="nimi">Nimi:</label>
+                <input type="text" id="nimi" name="nimi" required>
+
+                <label for="sahkoposti">Sähköposti:</label>
+                <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+                <label for="puhelinnumero">Puhelinnumero:</label>
+                <input type="tel" id="puhelinnumero" name="puhelinnumero">
+
+                <label for="viesti">Viesti:</label>
+                <textarea id="viesti" name="viesti" rows="4" required></textarea>
+
+                <button type="submit">Lähetä</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Työkalujen Vuokrauspalvelu</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
