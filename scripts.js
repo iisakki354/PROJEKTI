@@ -61,16 +61,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const toolElement = document.createElement("div");
         toolElement.className = "tyokalu-item";
         toolElement.innerHTML = `
-            <img src="${tool.kuva}" alt="${tool.nimi}">
-            <h3>${tool.nimi}</h3>
-            <p>Hinta: ${tool.hinta}€/päivä</p>
-            <p>${tool.kuvaus}</p>
-            <button class="ota-yhteytta">Ota yhteyttä</button>
-            <button class="vuokraa">Vuokraa</button>
-          `;
+              <img src="${tool.kuva}" alt="${tool.nimi}">
+              <h3>${tool.nimi}</h3>
+              <p>Hinta: ${tool.hinta}€/päivä</p>
+              <p>${tool.kuvaus}</p>
+              <button class="ota-yhteytta">Ota yhteyttä</button>
+              <button class="vuokraa">Vuokraa</button>
+            `;
         toolsContainer.appendChild(toolElement);
       });
     }
+  }
+
+  // Function to remove all tools /* postetaan kun valmistat koodit */
+  function poistaKaikkiTyokalut() {
+    localStorage.removeItem("tools");
+    renderTools();
+    alert("Kaikki työkalut on poistettu!");
+  }
+
+  // Event listener for removing all tools
+  const poistaKaikkiButton = document.getElementById("poista-kaikki-tyokalut");
+  if (poistaKaikkiButton) {
+    poistaKaikkiButton.addEventListener("click", poistaKaikkiTyokalut);
   }
 
   // localStorage = tallennustila, tässä tapahtuu työkalujen haku jos ne on tallennettu
